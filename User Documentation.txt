@@ -1,0 +1,56 @@
+
+
+
+
+
+
+                    non-preempt-29383412 and preempt-29383412
+
+                      	     Instruction Manual
+
+
+The compile command has to be issued with non-preempt-29383412.c and preempt-29383412.c being in the same directory as the terminal. And all
+the other commands have to issued with the terminal being in the same directory as the compiled non-preempt-29383412.c and preempt-29383412.c.  
+Before these programs can run it must be compiled into an executable file. Using the Linux virtual machine, the below commands should compile the programs
+	gcc non-preempt-29383412.c -o non-preempt-29383412 process-visualiser
+	gcc preempt-29383412.c -o preempt-29383412 process-visualiser
+NAME          
+       non-preempt-29383412- Pseudo FCFS scheduler
+SYNOPSIS          
+      iol -- ./non-preempt-29383412 [file]…
+
+
+DESCRIPTION         
+	
+	Read process information from process-data file if no other argument is given. This file needs to be run using iol otherwise it will throw errors.
+This simulates how a FCFS scheduler would function. An assumption hasa been made that when the scheduler intitates a process it goes to sleep and doesnt take part 
+in any activity.
+
+Example
+	iol - -./non-preempt-29383412
+	Takes data from default file
+	
+	iol - -./non-preempt-29383412 fil.txt
+	Takes data from given file
+
+
+
+
+NAME          
+       preempt-29383412- Pseudo RR scheduler
+SYNOPSIS          
+      iol -- ./non-preempt-29383412 [file]…
+
+
+DESCRIPTION         
+	
+	Read process information from process-data file if no other argument is given. This file needs to be run using iol otherwise it will throw errors.
+This simulates how a Round Robin scheduler would function. An assumption hasa been made that when the scheduler intitates a process it goes to sleep and doesnt take part 
+in any activity.
+
+Example
+	iol - -./preempt-29383412
+	Takes data from default file
+	
+	iol - -./preempt-29383412 fil.txt
+	Takes data from given file
